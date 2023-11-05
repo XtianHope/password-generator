@@ -23,3 +23,12 @@ function generatePassword() {
 }
 // Password Length Prompt
 var passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
+
+// Password Generator
+var password ='';
+for var i = 0; i <passwordLength; i++) {
+  var randomIndex = Math.florr(Math.random() * charPool.length);
+  password += charPool [randomIndex];
+}
+
+return password;
