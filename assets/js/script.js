@@ -26,7 +26,7 @@ var passwordLength = parseInt(prompt("Enter the length of the password (between 
 
 // Password Generator
 var password ='';
-for var i = 0; i <passwordLength; i++) {
+for (var i = 0; i <passwordLength; i++) {
   var randomIndex = Math.florr(Math.random() * charPool.length);
   password += charPool [randomIndex];
 }
