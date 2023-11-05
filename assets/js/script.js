@@ -21,9 +21,17 @@ function generatePassword() {
   var numberChar= "0123456789";
   var specialChar= "!@#$%^&*()_+{}|<>~=-][';/.\,";
 }
+
 // Password Length Prompt
 var passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
 
+// Prompt For What Character types to include
+const includeLowercase= confirm ("Including lowercase letters?");
+const includeUppercase = confirm ("Including uppercase characters?");
+const includeNumeric = confirm ("Including numeric characters?");
+const includeSpecial = confirm (Including special characters?");
+
+// Alert of error if number is not between 8 and 128
 if (isNaN(passwordLength) < 8 || passwordLength > 128) {
   alert ("Please enter a number between 8 and 128")
 }
