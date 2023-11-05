@@ -24,6 +24,10 @@ function generatePassword() {
 // Password Length Prompt
 var passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
 
+if (isNaN(passwordLength) < 8 || passwordLength > 128) {
+  alert ("Please enter a number between 8 and 128")
+}
+
 // Password Generator
 var password ='';
 for (var i = 0; i <passwordLength; i++) {
