@@ -39,10 +39,10 @@ if (isNaN(passwordLength)) {
 
 
 // Prompt For What Character types to include
-const includeLowercase= confirm("Including lowercase letters?");
-const includeUppercase = confirm("Including uppercase characters?");
-const includeNumeric = confirm("Including numeric characters?");
-const includeSpecial = confirm("Including special characters?");
+const includeLowercase= confirm("Include lowercase letters?");
+const includeUppercase = confirm("Include uppercase characters?");
+const includeNumeric = confirm("Include numeric characters?");
+const includeSpecial = confirm("Include special characters?");
 
 
 
