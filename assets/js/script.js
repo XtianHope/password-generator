@@ -67,6 +67,13 @@ var password ="";
       currentIndex++;
     }
 
+  // Set that when the condition for including numeric characters is met, a random character is added
+    if(includeNumeric == true) {
+      finalCharacterSet = finalCharacterSet + numberChar;
+      const randomIndex = Math.floor(Math.random() * numberChar.length);
+      password = password + numberChar[randomIndex];
+      currentIndex++;
+    }
 
 
 for (var i = 0; i <passwordLength; i++) {
