@@ -8,7 +8,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -25,22 +25,36 @@ function generatePassword() {
 // Password Length Prompt
 var passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
 
+// Alert of error if number is not a number
+if (isNaN(passwordLength)) {
+  alert ("Please enter a valid number between 8 and 128");
+  return "";
+}
+
+ // Alert of error if number is not between 8 and 128
+ if (passwordLength < 8 || passwordLength > 128) {
+  alert ("Please enter a valid number between 8 and 128");
+  return "";
+}
+
+
 // Prompt For What Character types to include
 const includeLowercase= confirm("Including lowercase letters?");
 const includeUppercase = confirm("Including uppercase characters?");
 const includeNumeric = confirm("Including numeric characters?");
 const includeSpecial = confirm("Including special characters?");
 
-// Alert of error if number is not between 8 and 128
-if (isNaN(passwordLength) < 8 || passwordLength > 128) {
-  alert ("Please enter a number between 8 and 128")
-}
+
 
 // Password Generator
-var password ='';
+var password ="";
+  let finalCharacterSet = "";
+
+
 for (var i = 0; i <passwordLength; i++) {
   var randomIndex = Math.floor(Math.random() * charPool.length);
   password += charPool [randomIndex];
 }
 
 return password;
+}
