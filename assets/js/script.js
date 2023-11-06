@@ -39,7 +39,7 @@ if (isNaN(passwordLength) < 8 || passwordLength > 128) {
 // Password Generator
 var password ='';
 for (var i = 0; i <passwordLength; i++) {
-  var randomIndex = Math.florr(Math.random() * charPool.length);
+  var randomIndex = Math.floor(Math.random() * charPool.length);
   password += charPool [randomIndex];
 }
 
