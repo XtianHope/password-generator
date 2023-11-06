@@ -75,6 +75,14 @@ var password ="";
       currentIndex++;
     }
 
+    // Set that when the condition for including special characters is met, a random character is added
+    if(includeSpecial == true) {
+      finalCharacterSet = finalCharacterSet + specialChar;
+      const randomIndex = Math.floor(Math.random() * specialChar.length);
+      password = password + specialChar[randomIndex];
+      currentIndex++;
+    }
+
 
 for (var i = 0; i <passwordLength; i++) {
   var randomIndex = Math.floor(Math.random() * charPool.length);
