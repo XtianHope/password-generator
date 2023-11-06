@@ -83,11 +83,12 @@ var password ="";
       currentIndex++;
     }
 
+    // Fixed for loop to ensure that i have included at least one character from each specified character set
+    for (let i = currentIndex; i < passwordLength; i++) {
+      const randomIndex = Math.floor(Math.random() * finalCharacterSet.length);
+      password = password + finalCharacterSet[randomIndex];
+    }
 
-for (var i = 0; i <passwordLength; i++) {
-  var randomIndex = Math.floor(Math.random() * charPool.length);
-  password += charPool [randomIndex];
-}
 
 return password;
 }
