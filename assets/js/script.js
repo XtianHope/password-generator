@@ -23,7 +23,7 @@ function generatePassword() {
 }
 
 // Password Length Prompt
-var passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
+const passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
 
 // Alert of error if number is not a number
 if (isNaN(passwordLength)) {
