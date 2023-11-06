@@ -50,6 +50,16 @@ const includeSpecial = confirm("Include special characters?");
 var password ="";
   let finalCharacterSet = "";
 
+  // Set that when the condition for including lowercase characters is met, a random character is added
+  let currentIndex = 0;
+    if(includeLowercase == true) {
+      finalCharacterSet = finalCharacterSet + lowercaseChar;
+      const randomIndex = Math.floor(Math.random() * lowercaseChar.length);
+      password = password + lowercaseChar[randomIndex];
+      currentIndex++;
+    }
+
+
 
 for (var i = 0; i <passwordLength; i++) {
   var randomIndex = Math.floor(Math.random() * charPool.length);
