@@ -59,6 +59,14 @@ var password ="";
       currentIndex++;
     }
 
+  // Set that when the condition for including uppercase characters is met, a random character is added
+    if(includeUppercase == true) {
+      finalCharacterSet = finalCharacterSet + uppercaseChar;
+      const randomIndex = Math.floor(Math.random() * uppercaseChar.length);
+      password = password + uppercaseChar[randomIndex];
+      currentIndex++;
+    }
+
 
 
 for (var i = 0; i <passwordLength; i++) {
