@@ -16,10 +16,10 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   // Defined Character Sets
-  var lowercaseChar= "abcdefghijklmnopqrstuvwxyz";
-  var uppercaseChar= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numberChar= "0123456789";
-  var specialChar= "!@#$%^&*()_+{}|<>~=-][';/.\,";
+  const lowercaseChar= "abcdefghijklmnopqrstuvwxyz";
+  const uppercaseChar= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numberChar= "0123456789";
+  const specialChar= "!@#$%^&*()_+{}|<>~=-][';/.\,";
 }
 
 // Password Length Prompt
