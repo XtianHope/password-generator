@@ -32,7 +32,7 @@ function generatePassword() {
   const passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
 
 
-  // Alert of error if number is not not a number
+  // Alert of error if number is not a number
   if (isNaN(passwordLength)) {
     alert ("Please enter a valid number between 8 and 128");
     return "";
@@ -47,10 +47,10 @@ function generatePassword() {
 
 
   // Prompt For What Character types to include
-  const includeLowercase = confirm("Including lowercase letters?");
-  const includeUppercase = confirm("Including uppercase characters?");
-  const includeNumeric = confirm("Including numeric characters?");
-  const includeSpecial = confirm("Including special characters?");
+  const includeLowercase = confirm("Include lowercase letters?");
+  const includeUppercase = confirm("Include uppercase characters?");
+  const includeNumeric = confirm("Include numeric characters?");
+  const includeSpecial = confirm("Include special characters?");
 
 
 
@@ -58,7 +58,7 @@ function generatePassword() {
   // Password Generator
   var password ="";
     let finalCharacterSet = "";
-   
+   // Set that when the condition for including lowercase characters is met, a random character is added
     let currentIndex = 0;
     if(includeLowercase == true) {
       finalCharacterSet = finalCharacterSet + lowercaseChar;
@@ -67,7 +67,7 @@ function generatePassword() {
       currentIndex++;
     }
 
-
+// Set that when the condition for including uppercase characters is met, a random character is added
     if(includeUppercase == true) {
       finalCharacterSet = finalCharacterSet + uppercaseChar;
       const randomIndex = Math.floor(Math.random() * uppercaseChar.length);
@@ -75,7 +75,7 @@ function generatePassword() {
       currentIndex++;
     }
 
-
+// Set that when the condition for including numeric characters is met, a random character is added
     if(includeNumeric == true) {
       finalCharacterSet = finalCharacterSet + numberChar;
       const randomIndex = Math.floor(Math.random() * numberChar.length);
@@ -83,7 +83,7 @@ function generatePassword() {
       currentIndex++;
     }
 
-
+// Set that when the condition for including special characters is met, a random character is added
     if(includeSpecial == true) {
       finalCharacterSet = finalCharacterSet + specialChar;
       const randomIndex = Math.floor(Math.random() * specialChar.length);
@@ -91,7 +91,7 @@ function generatePassword() {
       currentIndex++;
     }
 
-
+    // Fixed for loop to ensure that i have included at least one character from each specified character set
     for (let i = currentIndex; i < passwordLength; i++) {
       const randomIndex = Math.floor(Math.random() * finalCharacterSet.length);
       password = password + finalCharacterSet[randomIndex];
