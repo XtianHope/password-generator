@@ -21,32 +21,32 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function generatePassword() {
-  // Defined Character Sets
+// Defined Character Sets
   const lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
   const uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numberChar = "0123456789";
   const specialChar = "!@#$%^&*()_+{}|<>~=-][';/.\,";
 
 
-  // Password Length Prompt
+// Password Length Prompt
   const passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
 
 
-  // Alert of error if number is not a number
+// Alert of error if number is not a number
   if (isNaN(passwordLength)) {
     alert ("Please enter a valid number between 8 and 128");
     return "";
   }
 
 
-  // Alert of error if number is not between 8 and 128
+// Alert of error if number is not between 8 and 128
   if (passwordLength < 8 || passwordLength > 128) {
     alert ("Please enter a valid number between 8 and 128");
     return "";
   }
 
 
-  // Prompt For What Character types to include
+// Prompt For What Character types to include
   const includeLowercase = confirm("Include lowercase letters?");
   const includeUppercase = confirm("Include uppercase characters?");
   const includeNumeric = confirm("Include numeric characters?");
@@ -55,7 +55,7 @@ function generatePassword() {
 
 
 
-  // Password Generator
+// Password Generator
   var password ="";
     let finalCharacterSet = "";
    // Set that when the condition for including lowercase characters is met, a random character is added
@@ -91,7 +91,7 @@ function generatePassword() {
       currentIndex++;
     }
 
-    // Fixed for loop to ensure that i have included at least one character from each specified character set
+  // Fixed for loop to ensure that i have included at least one character from each specified character set
     for (let i = currentIndex; i < passwordLength; i++) {
       const randomIndex = Math.floor(Math.random() * finalCharacterSet.length);
       password = password + finalCharacterSet[randomIndex];
