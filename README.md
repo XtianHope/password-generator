@@ -16,7 +16,7 @@ Learnings
 
 
 ## Screenshot
-![Screenshot of Password Generator](./screenshots/password-generator.png)
+![Screenshot of Password Generator](./images/password-generator.png)
 
 
 ## Links
